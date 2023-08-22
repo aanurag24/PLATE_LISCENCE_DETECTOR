@@ -1,5 +1,3 @@
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects 
-// Verilog project: License Plate Recognition in Verilog 
 // Top level Verilog code for License Plate Recognition
 module LPChRec(  
    input clk,  
@@ -24,8 +22,8 @@ module LPChRec(
  assign ccl_th_high = 8'd255;  
  assign image_pixel_addr = (active)?ImgAddr:image_pixel_addr1;  
  assign image_pixel_val1 = image_pixel_val;  
- assign ImgVal                    = image_pixel_val;  
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects 
+ assign ImgVal = image_pixel_val;  
+   
 // Image processor unit
  image_processor image_processor_inst (  
    .image_pixel_addr(image_pixel_addr1),   
@@ -39,7 +37,6 @@ module LPChRec(
        .ccl_mem_result_addr(ObjAddr1),  
        .ccl_mem_result_data(ObjInfo)  
    );  
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects 
 // Create object module 
  CreateObj CreateObjInst (  
    .clk(clk),   
