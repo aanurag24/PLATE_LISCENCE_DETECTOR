@@ -1,5 +1,3 @@
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects 
-// Verilog project: License Plate Recognition in Verilog and Matlab 
 // Top level module for testing the license plate recognition system
 module Test_top(input clk // 33MHz   
                                ,rst, start,  
@@ -7,7 +5,7 @@ module Test_top(input clk // 33MHz
    );  
       reg [7:0] image_pixel_val;  
       // Outputs  
-      wire done;  // fpga4student.com FPGA projects, Verilog projects, VHDL projects 
+      wire done; 
       wire [15:0] image_pixel_addr;  
       wire [5:0] ReadCh;  
       reg[5:0] num1,num2,num3,num4,num5,num6,num7;  
@@ -53,7 +51,7 @@ module Test_top(input clk // 33MHz
       begin  
            image_pixel_val <= image_inv[image_pixel_addr];            
       end  
- // fpga4student.com FPGA projects, Verilog projects, VHDL projects 
+
    always @(posedge clk or posedge rst)  
       begin  
            if(rst) begin   
@@ -96,7 +94,7 @@ module Test_top(input clk // 33MHz
                 if(done) display <= 1;  
            end  
       end  
- // fpga4student.com FPGA projects, Verilog projects, VHDL projects 
+ 
       always @(posedge clk_4s or posedge rst) begin  
            if(rst) begin count_4s <= 0; led <=0; end  
            else begin   
